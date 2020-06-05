@@ -20,6 +20,16 @@ def post_list(request):
     }
     return render(request, 'blog/post_list.html',  context)
 
+def zespoly(request):
+
+    zespolyy = Druzyna.objects.all()
+    context = {
+        "objects_listt": zespolyy,
+
+    }
+    return render(request, 'blog/zespoly.html',  context)
+
+
 
 def meczyki(request):
 
