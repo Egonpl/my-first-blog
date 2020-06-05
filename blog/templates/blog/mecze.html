@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+            {% for obj in objects_list%}
+
+                    <div class="content">
+                    <h4>{{ obj.nazwa_meczu }}</h4><br/>
+                    {{ obj.data_rozegrania }}<br/>
+                    {{ obj.id_miejscowosci}}<br/>
+                     {{ obj.druzyna_gospodarzy}}<br/>
+                     {{ obj.druzyna_gosci}}<br/>
+                     {{ obj.wynik_goscia}}<br/>
+                     {{ obj.wynik_gospodarza}}<br/>
+
+                        </div>
+
+            {% endfor %}
+{% endblock %}
